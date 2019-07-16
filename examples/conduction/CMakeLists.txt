@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.9...3.12)
+project(conduction LANGUAGES CXX)
+set(CMAKE_PREFIX_PATH /home/ylang/local/BOUT)
+find_package(MPI REQUIRED)
+include_directories($MPI_INCLUDE_PATH)
+find_package(bout++ REQUIRED)
+add_executable(conduction conduction.cxx)
+target_link_libraries(conduction PRIVATE bout++::bout++)

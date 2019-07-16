@@ -403,7 +403,7 @@ endif()
 message(STATUS "Enable backtrace: BACKTRACE=${ENABLE_BACKTRACE}")
 set(BOUT_USE_BACKTRACE ${ENABLE_BACKTRACE})
 
-option(ENABLE_OPENMP "Enable OpenMP support" OFF)
+option(ENABLE_OPENMP "Enable OpenMP support" ON)
 if (ENABLE_OPENMP)
   find_package(OpenMP REQUIRED)
   target_link_libraries(bout++ PUBLIC OpenMP::OpenMP_CXX)
@@ -509,7 +509,8 @@ endif()
 message(STATUS "SLEPc support: ${USE_SLEPC}")
 set(BOUT_HAS_SLEPC ${USE_SLEPC})
 
-option(USE_SUNDIALS "Enable support for SUNDIALS time solvers" OFF)
+set(SUNDIALS_ROOT "/home/ylang/local")
+option(USE_SUNDIALS "Enable support for SUNDIALS time solvers" ON)
 if (USE_SUNDIALS)
   find_package(SUNDIALS REQUIRED)
   target_compile_definitions(bout++
@@ -630,7 +631,7 @@ endif()
 
 ##################################################
 # Installation
-
+set(CMAKE_INSTALL_PREFIX /home/ylang/local/BOUT)
 include(GNUInstallDirs)
 install(TARGETS bout++
   EXPORT bout++Targets
