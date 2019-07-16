@@ -49,3 +49,4 @@ externalpackages/
 googletest/
 *.tmp
 .idea/
+.idea/*
