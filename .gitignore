@@ -41,3 +41,11 @@ src/.libfast
 .BOUT.pid.*
 build/
 build*/
+
+
+tests/
+cmake-build-debug/
+googletest/
+externalpackages/
+*.tmp
+.idea/
