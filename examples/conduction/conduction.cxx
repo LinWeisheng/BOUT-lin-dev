@@ -26,8 +26,7 @@ protected:
 
     // Tell BOUT++ to solve T
     SOLVE_FOR(T);
-    options.
-    
+
     return 0;
   }
 
