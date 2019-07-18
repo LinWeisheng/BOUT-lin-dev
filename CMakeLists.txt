@@ -509,8 +509,8 @@ endif()
 message(STATUS "SLEPc support: ${USE_SLEPC}")
 set(BOUT_HAS_SLEPC ${USE_SLEPC})
 
-set(SUNDIALS_ROOT "/home/ylang/local")
-option(USE_SUNDIALS "Enable support for SUNDIALS time solvers" ON)
+#set(SUNDIALS_ROOT "/home/ylang/local")
+option(USE_SUNDIALS "Enable support for SUNDIALS time solvers" OFF)
 if (USE_SUNDIALS)
   find_package(SUNDIALS REQUIRED)
   target_compile_definitions(bout++
@@ -631,7 +631,7 @@ endif()
 
 ##################################################
 # Installation
-set(CMAKE_INSTALL_PREFIX /home/ylang/local/BOUT)
+set(CMAKE_INSTALL_PREFIX /home/lin/local/BOUT)
 include(GNUInstallDirs)
 install(TARGETS bout++
   EXPORT bout++Targets
